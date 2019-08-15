@@ -4,7 +4,7 @@ RUN opam init -a --compiler=4.06.0+32bit
 RUN opam repo add esp https://github.com/well-typed-lightbulbs/opam-cross-esp32.git
 RUN opam install mirage.3.0.8a+esp32 ocaml-esp32 -y
 RUN git clone https://github.com/well-typed-lightbulbs/mirage-esp32-samples /esp/mirage
-WORKDIR /esp/mirage/hello_world
+WORKDIR /esp/mirage/ap_dhcp
 RUN opam update esp
 RUN opam config exec -- mirage config -t esp32
 RUN apt-get install -y pkg-config
